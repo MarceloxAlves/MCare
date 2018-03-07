@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+         xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/search"
+        android:title="@string/busca"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="collapseActionView|ifRoom"
+        app:actionViewClass="android.widget.SearchView" />
+
+    <item android:title="@string/sair"
+        android:id="@+id/item_sair"/>
+    <item android:title="@string/especialidade"
+        android:id="@+id/item_especialidade"/>
+    <item android:title="@string/clinicas"
+        android:id="@+id/item_clinicas"/>
+</menu>
