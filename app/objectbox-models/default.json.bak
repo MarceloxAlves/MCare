@@ -1,0 +1,279 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:1984825075092908802",
+      "lastPropertyId": "4:1473597812783333880",
+      "name": "Usuario",
+      "properties": [
+        {
+          "id": "1:3191951256438452642",
+          "name": "id"
+        },
+        {
+          "id": "2:6252237705207356704",
+          "name": "email"
+        },
+        {
+          "id": "3:8994293712827742448",
+          "name": "senha"
+        },
+        {
+          "id": "4:1473597812783333880",
+          "name": "nome"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:2514392077749261762",
+      "lastPropertyId": "8:8998424930341588882",
+      "name": "Consulta",
+      "properties": [
+        {
+          "id": "1:2351597352030243291",
+          "name": "id"
+        },
+        {
+          "id": "2:9171289210172345893",
+          "name": "status"
+        },
+        {
+          "id": "3:69757601314606939",
+          "indexId": "1:4824913717496856564",
+          "name": "usuarioId"
+        },
+        {
+          "id": "4:6528815781718958705",
+          "indexId": "2:7263256486322181769",
+          "name": "medicoId"
+        },
+        {
+          "id": "5:2551767436055683196",
+          "name": "data"
+        },
+        {
+          "id": "6:3716392339755572033",
+          "indexId": "3:871012961394128855",
+          "name": "clinicaId"
+        },
+        {
+          "id": "7:1669719672436967",
+          "name": "horario"
+        },
+        {
+          "id": "8:8998424930341588882",
+          "indexId": "7:3336817173705698983",
+          "name": "especialidadeToOneId"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:4009085912339321744",
+      "lastPropertyId": "9:5762687538176652055",
+      "name": "Medico",
+      "properties": [
+        {
+          "id": "1:7487655093845902877",
+          "name": "id"
+        },
+        {
+          "id": "3:6830243058227079958",
+          "name": "crm"
+        },
+        {
+          "id": "5:4298341139072351149",
+          "name": "nome"
+        },
+        {
+          "id": "7:6110310368784240420",
+          "name": "contato"
+        },
+        {
+          "id": "8:7190221358169317998",
+          "name": "avaliacao"
+        },
+        {
+          "id": "9:5762687538176652055",
+          "name": "foto"
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:5777745582967813755",
+          "name": "especialidade"
+        }
+      ]
+    },
+    {
+      "id": "4:4694274111332394645",
+      "lastPropertyId": "2:5254992663331744047",
+      "name": "Clinica",
+      "properties": [
+        {
+          "id": "1:5831899348174992611",
+          "name": "id"
+        },
+        {
+          "id": "2:5254992663331744047",
+          "name": "nome"
+        }
+      ],
+      "relations": [
+        {
+          "id": "2:8884053460408394386",
+          "name": "medicos"
+        }
+      ]
+    },
+    {
+      "id": "5:1471062512313964538",
+      "lastPropertyId": "2:3127253105753220799",
+      "name": "Especialidade",
+      "properties": [
+        {
+          "id": "1:164206033034779906",
+          "name": "id"
+        },
+        {
+          "id": "2:3127253105753220799",
+          "name": "descricao"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:9862999365543944",
+      "lastPropertyId": "7:905384316852196251",
+      "name": "Exame",
+      "properties": [
+        {
+          "id": "1:7211397977057035992",
+          "name": "id"
+        },
+        {
+          "id": "2:2166461806288031812",
+          "name": "descricao"
+        },
+        {
+          "id": "3:2996371334400994891",
+          "indexId": "5:3032466019698826126",
+          "name": "consultaToOneId"
+        },
+        {
+          "id": "4:5705700426182234551",
+          "name": "nota"
+        },
+        {
+          "id": "5:5138758438664118766",
+          "indexId": "8:4600557353453577598",
+          "name": "tipoExameId"
+        },
+        {
+          "id": "6:8835636816995753484",
+          "indexId": "9:210875846992153156",
+          "name": "usuarioToOneId"
+        },
+        {
+          "id": "7:905384316852196251",
+          "name": "data"
+        }
+      ],
+      "relations": [
+        {
+          "id": "3:3396573165631294891",
+          "name": "resultados"
+        }
+      ]
+    },
+    {
+      "id": "7:4412048056671394886",
+      "lastPropertyId": "4:2242906719042474304",
+      "name": "Resultado",
+      "properties": [
+        {
+          "id": "1:8214870136239490751",
+          "name": "id"
+        },
+        {
+          "id": "2:7366888844605332544",
+          "name": "descricao"
+        },
+        {
+          "id": "3:6939425264532435557",
+          "name": "valor"
+        },
+        {
+          "id": "4:2242906719042474304",
+          "indexId": "6:1540532441102430465",
+          "name": "exameToOneId"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "8:6281047075790036344",
+      "lastPropertyId": "2:3475615665641175078",
+      "name": "TipoExame",
+      "properties": [
+        {
+          "id": "1:6661959807185438014",
+          "name": "id"
+        },
+        {
+          "id": "2:3475615665641175078",
+          "name": "descricao"
+        }
+      ],
+      "relations": [
+        {
+          "id": "5:8783137617953203874",
+          "name": "tipoResultados"
+        }
+      ]
+    },
+    {
+      "id": "9:6027020866849414447",
+      "lastPropertyId": "3:6290140283371445759",
+      "name": "TipoResultado",
+      "properties": [
+        {
+          "id": "1:6317372173714621293",
+          "name": "id"
+        },
+        {
+          "id": "2:3160448796454199187",
+          "name": "descricao"
+        },
+        {
+          "id": "3:6290140283371445759",
+          "indexId": "10:8911647705959708621",
+          "name": "tipoExameToOneId"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "9:6027020866849414447",
+  "lastIndexId": "10:8911647705959708621",
+  "lastRelationId": "5:8783137617953203874",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [
+    3586857554611338569
+  ],
+  "retiredPropertyUids": [
+    3445811735731044966,
+    6109686994681824111,
+    1517968048484035007
+  ],
+  "retiredRelationUids": [
+    4676941522750362239
+  ],
+  "version": 1
+}

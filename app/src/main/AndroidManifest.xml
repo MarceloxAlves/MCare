@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.marcelo.mcare">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".dal.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".app.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".app.SignActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".app.ConsultaFormActivity"
+            android:parentActivityName=".app.MainActivity" />
+        <activity
+            android:name=".app.EspecialidadeActivity"
+            android:label="@string/especialiades"
+            android:launchMode="singleTop"
+            android:parentActivityName=".app.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".app.MedicoActivity"
+            android:label="@string/medicos"
+            android:parentActivityName=".app.MainActivity" />
+        <activity
+            android:name=".app.MedicoDetalheActivity"
+            android:label="Médico"
+            android:parentActivityName=".app.MedicoActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAaBchPjR_0UAbEwMHQCd78FMSHVE5tdjY" />
+
+        <activity
+            android:name=".app.ClinicaActivity"
+            android:parentActivityName=".app.MainActivity" />
+        <activity
+            android:name=".app.ClinicaDetalheActivity"
+            android:parentActivityName=".app.MainActivity" />
+        <activity
+            android:name=".app.TipoExameActivity"
+            android:parentActivityName=".app.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:parentActivityName=".app.ResultadoDetalheActivity"
+            android:label="@string/resultado"
+            android:name=".app.ResultadoDetalheActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+        <item
+            android:id="@+id/nav_clinica"
+            android:title="Clíncas"
+            android:icon="@drawable/ic_clinica"/>
+        <item
+            android:id="@+id/nav_medico"
+            android:title="Médicos"
+            android:icon="@drawable/ic_item_medico"/>
+        <item
+            android:id="@+id/nav_especialidades"
+            android:title="Especialidades"
+            android:icon="@drawable/ic_especialidade"/>
+        <item
+            android:id="@+id/nav_tipo_exames"
+            android:title="Tipo Exames"
+            android:icon="@drawable/ic_exame"/>
+
+    <item android:title="Logout">
+        <menu>
+            <item
+                android:id="@+id/perfil"
+                android:icon="@drawable/ic_person_add"
+                android:title="Sobre" />
+            <item
+                android:id="@+id/nav_sair"
+                android:icon="@drawable/ic_logout"
+                android:title="Sair" />
+        </menu>
+    </item>
+
+
+</menu>
