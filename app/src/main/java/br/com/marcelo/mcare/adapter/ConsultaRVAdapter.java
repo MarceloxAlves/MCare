@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
@@ -26,8 +25,6 @@ import java.util.Date;
 import java.util.List;
 
 import br.com.marcelo.mcare.R;
-import br.com.marcelo.mcare.app.ConsultaFragment;
-import br.com.marcelo.mcare.app.MainActivity;
 import br.com.marcelo.mcare.dal.App;
 import br.com.marcelo.mcare.model.Consulta;
 import br.com.marcelo.mcare.model.Especialidade;
@@ -38,7 +35,6 @@ import br.com.marcelo.mcare.model.StatusConsulta;
 import br.com.marcelo.mcare.model.TipoExame;
 import br.com.marcelo.mcare.model.TipoExame_;
 import br.com.marcelo.mcare.model.TipoResultado;
-import br.com.marcelo.mcare.model.Usuario;
 import br.com.marcelo.mcare.utils.TextoFormato;
 import br.com.marcelo.mcare.utils.Validator;
 import io.objectbox.Box;
@@ -105,6 +101,11 @@ public class ConsultaRVAdapter extends RecyclerView.Adapter<ConsultaRVAdapter.Vi
         }
 
         setCorStatus(holder, consulta);
+
+
+        holder.itemView.setOnClickListener(v->{
+           //TODO
+        });
 
         if(!consulta.especialidadeToOne.isNull()) {
             holder.txtEspecialidade.setText(consulta.especialidadeToOne.getTarget().getDescricao());

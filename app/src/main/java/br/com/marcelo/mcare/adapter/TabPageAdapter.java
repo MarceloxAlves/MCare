@@ -3,6 +3,7 @@ package br.com.marcelo.mcare.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.widget.Toast;
 
 import br.com.marcelo.mcare.app.ConsultaFragment;
 import br.com.marcelo.mcare.app.ExameFragment;
@@ -18,6 +19,11 @@ public class TabPageAdapter extends FragmentPagerAdapter {
 
     public TabPageAdapter(FragmentManager fm) {
         super(fm);
+    }
+
+    @Override
+    public void notifyDataSetChanged() {
+        super.notifyDataSetChanged();
     }
 
     @Override

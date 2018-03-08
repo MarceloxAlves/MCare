@@ -112,17 +112,22 @@ public class MainActivity extends AppCompatActivity
 
         TextView apelido = navigationView.getHeaderView(0).findViewById(R.id.txt_apelido);
         TextView email = navigationView.getHeaderView(0).findViewById(R.id.txt_email);
+
+        setupUser(apelido, email);
+
+        tabLayout.setupWithViewPager(viewPager);
+        viewPager.setAdapter(new TabPageAdapter(getSupportFragmentManager()));
+
+
+    }
+
+    private void setupUser(TextView apelido, TextView email) {
         try {
             apelido.setText(login.getUsuarioLogado().getNome());
             email.setText(login.getUsuarioLogado().getEmail());
         }catch (Exception e){
             login.logout();
         }
-
-        tabLayout.setupWithViewPager(viewPager);
-        viewPager.setAdapter(new TabPageAdapter(getSupportFragmentManager()));
-
-
     }
 
 
